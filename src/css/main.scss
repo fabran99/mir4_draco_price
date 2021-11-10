@@ -1,0 +1,130 @@
+// import poppins font from google fonts
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  //   gradient between #200039 and #3e056b to top and dont repeat
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to top, #200039, #3e056b);
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(20px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(20px) rotate(360deg);
+  }
+}
+
+.container {
+  text-align: center;
+  padding: 1em;
+  h1 {
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+
+  #loader {
+    //   show loader animation
+    animation: spin 1s linear infinite;
+    // add loader style
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 1em auto;
+  }
+
+  #draco-upd-date {
+    color: rgb(221, 220, 220);
+    font-size: 0.8em;
+  }
+
+  .draco-price {
+    span {
+      display: inline-block;
+    }
+    #draco-price-value {
+      font-size: 2.5em;
+      color: white;
+      padding: 0.25em;
+    }
+    #draco-price-change {
+      font-size: 1em;
+      color: white;
+      padding: 0.25em;
+      //   align vertically
+      transform: translatey(-30%);
+      &.d-none {
+        display: none;
+        padding: 0;
+      }
+
+      &.negative {
+        background-color: rgb(255, 60, 60);
+        color: white;
+      }
+      &.positive {
+        background-color: rgb(0, 89, 255);
+        color: white;
+      }
+    }
+  }
+
+  .notifications {
+    margin-top: 1em;
+
+    #should-notify {
+      display: none;
+      &:not(:checked) ~ .label-notify {
+        background-color: gray;
+      }
+    }
+
+    .label-notify {
+      display: inline-block;
+      padding: 0.5em;
+      border: 1px solid white;
+      color: white;
+      font-size: 0.7em;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      border-radius: 3px;
+    }
+
+    p {
+      margin: 1em auto;
+      color: white;
+      font-size: 0.6em;
+      text-transform: uppercase;
+    }
+
+    #notify-value {
+      // put input of type number styles
+      width: 5em;
+      font-size: 1em;
+      color: white;
+      border: 1px solid white;
+      border-radius: 3px;
+      padding: 0.12em;
+      padding-left: 0.5em;
+      margin: 0.5em auto;
+      transition: all 0.2s ease-in-out;
+      background-color: rgb(24, 24, 24);
+      font-family: "Poppins";
+      margin-left: 0.5em;
+      transform: translateY(2px);
+      outline: none;
+    }
+  }
+}

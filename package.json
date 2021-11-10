@@ -1,0 +1,26 @@
+{
+  "name": "mir4_draco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "build": {
+    "appId": "mir4_draco.app"
+  },
+  "scripts": {
+    "start": "electron .",
+    "electron-build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^95.0.0",
+    "electron-chromedriver": "^15.0.0",
+    "selenium-webdriver": "^4.0.0"
+  },
+  "devDependencies": {
+    "electron": "^15.3.1",
+    "electron-builder": "^22.13.1",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}

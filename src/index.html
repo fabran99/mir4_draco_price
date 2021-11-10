@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draco price</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- load script from ./js/handleElectron -->
+    <div class="container">
+        <h1>Draco price</h1>
+        <p class="value">
+            <div id="loader"></div>
+
+            <div class="draco-price">
+                <span id="draco-price-value"></span>
+                <span id="draco-price-change" class="d-none"></span>
+            </div>
+            <div id="draco-upd-date"></div>
+            
+        </p>
+    <div class="notifications">
+        <input type="checkbox" id="should-notify" />
+        <label for="should-notify" class="label-notify" id="should-notify-label">
+            Notificaciones
+        </label>
+        <input type="number" id="notify-value" />
+        <p>
+            Activar el boton de notificaciones te notificará cuando el Draco sea mayor al valor ingresado.
+        </p>
+    </div>
+</div>
+<script src="./js/handleElectron.js"></script>
+  </body>
+</html>
